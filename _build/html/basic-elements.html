@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Pie chart &#8212; Matplotlib Recherche</title>
+    <title>Éléments basiques &#8212; Matplotlib Recherche</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -42,6 +42,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="_static/togglebutton.js"></script>
+    <script src="_static/translations.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -51,11 +52,11 @@ const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="search" title="Recherche" href="search.html" />
     <link rel="next" title="Éléments avancées" href="advanced-elements.html" />
     <link rel="prev" title="Avant de commencer" href="before-beginning.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="fr">
     
 
     <!-- Google Analytics -->
@@ -126,7 +127,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Pie chart
+   Éléments basiques
   </a>
  </li>
  <li class="toctree-l1">
@@ -203,7 +204,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/basic-elements.ipynb"
+        <a href="https://mybinder.org/v2/gh/SoufianeSaadouni/matplotlib-project/master?urlpath=tree/docs/basic-elements.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -217,6 +218,24 @@ title="Launch on Binder"
   </span>
 <span class="headerbtn__text-container">Binder</span>
 </a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
 
       </li>
       
@@ -246,7 +265,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book"
+        <a href="https://github.com/SoufianeSaadouni/matplotlib-project"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -263,7 +282,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fbasic-elements.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/SoufianeSaadouni/matplotlib-project/issues/new?title=Issue%20on%20page%20%2Fbasic-elements.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -350,22 +369,22 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pie-chart">
    Pie chart
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bar-chart">
    Bar chart
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#histogram">
    Histogram
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#line-plot">
    Line plot
   </a>
@@ -379,7 +398,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Pie chart</h1>
+                <h1>Éléments basiques</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -389,22 +408,22 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pie-chart">
    Pie chart
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#bar-chart">
    Bar chart
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#histogram">
    Histogram
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#line-plot">
    Line plot
   </a>
@@ -419,8 +438,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section id="pie-chart">
-<h1>Pie chart<a class="headerlink" href="#pie-chart" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="elements-basiques">
+<h1>Éléments basiques<a class="headerlink" href="#elements-basiques" title="Lien permanent vers ce titre">#</a></h1>
+<section id="pie-chart">
+<h2>Pie chart<a class="headerlink" href="#pie-chart" title="Lien permanent vers ce titre">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -437,12 +458,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/basic-elements_1_0.png" src="_images/basic-elements_1_0.png" />
+<img alt="_images/basic-elements_2_0.png" src="_images/basic-elements_2_0.png" />
 </div>
 </div>
 </section>
 <section id="bar-chart">
-<h1>Bar chart<a class="headerlink" href="#bar-chart" title="Permalink to this headline">#</a></h1>
+<h2>Bar chart<a class="headerlink" href="#bar-chart" title="Lien permanent vers ce titre">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -456,12 +477,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/basic-elements_3_0.png" src="_images/basic-elements_3_0.png" />
+<img alt="_images/basic-elements_4_0.png" src="_images/basic-elements_4_0.png" />
 </div>
 </div>
 </section>
 <section id="histogram">
-<h1>Histogram<a class="headerlink" href="#histogram" title="Permalink to this headline">#</a></h1>
+<h2>Histogram<a class="headerlink" href="#histogram" title="Lien permanent vers ce titre">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -474,19 +495,19 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([ 11.,  33.,  94., 190., 250., 204., 133.,  59.,  21.,   5.]),
- array([-2.98891241, -2.36697389, -1.74503537, -1.12309685, -0.50115832,
-         0.1207802 ,  0.74271872,  1.36465724,  1.98659576,  2.60853429,
-         3.23047281]),
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([  5.,  19.,  67., 147., 239., 227., 200.,  71.,  23.,   2.]),
+ array([-3.26457505, -2.6213032 , -1.97803136, -1.33475952, -0.69148768,
+        -0.04821584,  0.59505601,  1.23832785,  1.88159969,  2.52487153,
+         3.16814337]),
  &lt;BarContainer object of 10 artists&gt;)
 </pre></div>
 </div>
-<img alt="_images/basic-elements_5_1.png" src="_images/basic-elements_5_1.png" />
+<img alt="_images/basic-elements_6_1.png" src="_images/basic-elements_6_1.png" />
 </div>
 </div>
 </section>
 <section id="line-plot">
-<h1>Line plot<a class="headerlink" href="#line-plot" title="Permalink to this headline">#</a></h1>
+<h2>Line plot<a class="headerlink" href="#line-plot" title="Lien permanent vers ce titre">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -504,19 +525,20 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7ff5d85ca6b0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f3c0e3a70d0&gt;]
 </pre></div>
 </div>
-<img alt="_images/basic-elements_7_1.png" src="_images/basic-elements_7_1.png" />
+<img alt="_images/basic-elements_8_1.png" src="_images/basic-elements_8_1.png" />
 </div>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
+            repo: "SoufianeSaadouni/matplotlib-project",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -539,16 +561,16 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="before-beginning.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="before-beginning.html" title="précédent page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-subtitle">précédent</p>
             <p class="prev-next-title">Avant de commencer</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="advanced-elements.html" title="next page">
+    <a class='right-next' id="next-link" href="advanced-elements.html" title="suivant page">
     <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-subtitle">suivant</p>
         <p class="prev-next-title">Éléments avancées</p>
     </div>
     <i class="fas fa-angle-right"></i>
@@ -562,7 +584,6 @@ title="Print to PDF"
   
     By Soufiane, Imad, Wiam, Imane, Mohammed<br/>
   
-      &copy; Copyright 2022.<br/>
 </p>
         </footer>
     </div>
