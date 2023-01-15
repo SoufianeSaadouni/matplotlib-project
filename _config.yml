@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Matplotlib Recherche
-author: Soufiane, Imad, Wiam, Imane, Mohammed
+author: Saadouni Soufiane, Ikharaze Imad, Bissi Wiam, Bousaid Imane, Chahi Mohammed
 logo: logo.svg
 
 # Force re-execution of notebooks on each build.
