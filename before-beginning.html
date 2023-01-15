@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Avant de commencer &#8212; Matplotlib Recherche</title>
+    <title>Informations préliminaires &#8212; Matplotlib Recherche</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Éléments basiques" href="basic-elements.html" />
+    <link rel="next" title="Exemples basiques de tracé avec Matplotlib" href="basic-elements.html" />
     <link rel="prev" title="Guide d’installation" href="installation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="fr">
@@ -122,17 +122,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Avant de commencer
+   Informations préliminaires
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="basic-elements.html">
-   Éléments basiques
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="advanced-elements.html">
-   Éléments avancées
+   Exemples basiques de tracé avec Matplotlib
   </a>
  </li>
  <li class="toctree-l1">
@@ -370,9 +365,80 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#informations-preliminaires">
-   Informations préliminaires
+  <a class="reference internal nav-link" href="#affichage-des-traces-dans-matplotlib">
+   Affichage des tracés dans Matplotlib
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tracer-a-partir-d-un-script">
+     Tracer à partir d’un script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tracer-a-partir-d-un-shell-ipython">
+     Tracer à partir d’un shell IPython
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tracer-a-partir-de-jupyter-notebook">
+     Tracer à partir de Jupyter Notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hierarchie-des-objets-matplotlib">
+   Hiérarchie des objets Matplotlib
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-matplotlib">
+   API Matplotlib
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-pyplot">
+   API Pyplot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualisation-avec-pyplot">
+     Visualisation avec Pyplot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-une-commande-polyvalente">
+     plot() - Une commande polyvalente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interface-de-machine-d-etat">
+     Interface de machine d’état
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formatage-du-style-de-trace">
+     Formatage du style de tracé
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-orientee-objet">
+   API orientée objet
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objets-et-reference">
+     Objets et référence
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-et-subplots">
+     Figure et Subplots
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -383,7 +449,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Avant de commencer</h1>
+                <h1>Informations préliminaires</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -394,9 +460,80 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#informations-preliminaires">
-   Informations préliminaires
+  <a class="reference internal nav-link" href="#affichage-des-traces-dans-matplotlib">
+   Affichage des tracés dans Matplotlib
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tracer-a-partir-d-un-script">
+     Tracer à partir d’un script
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tracer-a-partir-d-un-shell-ipython">
+     Tracer à partir d’un shell IPython
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tracer-a-partir-de-jupyter-notebook">
+     Tracer à partir de Jupyter Notebook
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hierarchie-des-objets-matplotlib">
+   Hiérarchie des objets Matplotlib
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-matplotlib">
+   API Matplotlib
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-pyplot">
+   API Pyplot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualisation-avec-pyplot">
+     Visualisation avec Pyplot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot-une-commande-polyvalente">
+     plot() - Une commande polyvalente
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interface-de-machine-d-etat">
+     Interface de machine d’état
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formatage-du-style-de-trace">
+     Formatage du style de tracé
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#api-orientee-objet">
+   API orientée objet
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#objets-et-reference">
+     Objets et référence
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-et-subplots">
+     Figure et Subplots
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -408,22 +545,65 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="avant-de-commencer">
-<h1>Avant de commencer<a class="headerlink" href="#avant-de-commencer" title="Lien permanent vers ce titre">#</a></h1>
-<section id="informations-preliminaires">
-<h2>Informations préliminaires<a class="headerlink" href="#informations-preliminaires" title="Lien permanent vers ce titre">#</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> est une collection de fonctions qui font fonctionner Matplotlib comme MATLAB. Chaque fonction pyplot apporte des modifications à une figure : par exemple, crée une figure, crée une zone de traçage dans une figure, trace certaines lignes dans une zone de traçage, décore le tracé avec des étiquettes, etc.</p>
-<p>exemple d’un simple diagram:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="informations-preliminaires">
+<h1>Informations préliminaires<a class="headerlink" href="#informations-preliminaires" title="Lien permanent vers ce titre">#</a></h1>
+<section id="affichage-des-traces-dans-matplotlib">
+<h2>Affichage des tracés dans Matplotlib<a class="headerlink" href="#affichage-des-traces-dans-matplotlib" title="Lien permanent vers ce titre">#</a></h2>
+<p>L’affichage du tracé Matplotlib est basé sur le contexte. La meilleure utilisation de Matplotlib diffère selon la façon dont nous l’utilisons. Il existe trois contextes applicables pour visualiser les tracés. Les trois contextes applicables utilisent le traçage à partir d’un script, le traçage à partir d’un shell IPython ou le traçage à partir d’un bloc-notes Jupyter.</p>
+<section id="tracer-a-partir-d-un-script">
+<h3>Tracer à partir d’un script<a class="headerlink" href="#tracer-a-partir-d-un-script" title="Lien permanent vers ce titre">#</a></h3>
+<p>Si nous utilisons Matplotlib à partir d’un script, la commande plt.show() est d’une grande utilité. Il démarre une boucle d’événements, recherche tous les objets de figure actuellement actifs et ouvre une ou plusieurs fenêtres interactives qui affichent la ou les figures.</p>
+<p>La commande plt.show() ne doit être utilisée qu’une seule fois par session Python. Il ne doit être utilisé qu’à la fin du script. Plusieurs commandes plt.show() peuvent conduire à des résultats imprévisibles et doivent généralement être évitées.</p>
+</section>
+<section id="tracer-a-partir-d-un-shell-ipython">
+<h3>Tracer à partir d’un shell IPython<a class="headerlink" href="#tracer-a-partir-d-un-shell-ipython" title="Lien permanent vers ce titre">#</a></h3>
+<p>Nous pouvons utiliser Matplotlib de manière interactive dans un shell IPython. IPython fonctionne bien avec Matplotlib si nous spécifions le mode Matplotlib. Pour activer ce mode, nous pouvons utiliser la commande %matplotlib après avoir démarré iPython. Toute commande plt plot entraînera l’ouverture d’une fenêtre de figure et d’autres commandes peuvent être exécutées pour mettre à jour le tracé.</p>
+</section>
+<section id="tracer-a-partir-de-jupyter-notebook">
+<h3>Tracer à partir de Jupyter Notebook<a class="headerlink" href="#tracer-a-partir-de-jupyter-notebook" title="Lien permanent vers ce titre">#</a></h3>
+<p>Le Jupyter Notebook (anciennement connu sous le nom de IPython Notebook) est un outil d’analyse et de visualisation de données qui fournit plusieurs outils sous un même toit. Il fournit l’exécution de code, des tracés graphiques, un affichage de texte riche et multimédia, des formules mathématiques et bien d’autres fonctionnalités dans un seul document exécutable.</p>
+<p>Le traçage interactif dans un Jupyter Notebook peut être effectué avec la commande %matplotlib. Il existe deux options possibles pour travailler avec des graphiques dans Jupyter Notebook. Ce sont les suivants :</p>
+<p>• %matplotlib notebook – Cette commande produira des tracés interactifs intégrés dans le notebook.</p>
+<p>• %matplotlib inline – Il produira des images statiques du tracé intégré dans le cahier.</p>
+<p>Après cette commande (elle ne doit être effectuée qu’une seule fois par noyau et par session), toute cellule du bloc-notes qui crée un tracé intégrera une image PNG du graphique.</p>
+</section>
+</section>
+<section id="hierarchie-des-objets-matplotlib">
+<h2>Hiérarchie des objets Matplotlib<a class="headerlink" href="#hierarchie-des-objets-matplotlib" title="Lien permanent vers ce titre">#</a></h2>
+<p>Dans Matplotlib, un tracé est une hiérarchie d’objets Python imbriqués. Ahierarch signifie qu’il existe une structure arborescente d’objets Matplotlib sous-jacente à chaque tracé.</p>
+<p>Un objet Figure est le conteneur le plus externe pour un tracé Matplotlib. L’objet Figure contient plusieurs objets Axes. Ainsi, la figure est le graphique final qui peut contenir un ou plusieurs axes. Les Axes représentent une parcelle individuelle.</p>
+<p>Ainsi, nous pouvons considérer l’objet Figure comme un conteneur en forme de boîte contenant un ou plusieurs Axes. L’objet Axes contient des objets plus petits tels que des graduations, des lignes, des légendes, des titres et des zones de texte.</p>
+</section>
+<section id="api-matplotlib">
+<h2>API Matplotlib<a class="headerlink" href="#api-matplotlib" title="Lien permanent vers ce titre">#</a></h2>
+<p>Matplotlib a deux API avec lesquelles travailler. Une interface basée sur l’état de style MATLAB et une interface orientée objet (OO) plus puissante. L’ancienne interface basée sur l’état de style MATLAB est appelée interface pyplot et la seconde est appelée interface orientée objet.</p>
+<p>Il existe une troisième interface également appelée interface pyLab. Il fusionne pyplot (pour le traçage) et NumPy (pour les fonctions mathématiques) dans un environnement plus proche de MATLAB. Ceci est considéré comme une mauvaise pratique de nos jours. Ainsi, l’utilisation de pyLab est fortement déconseillée et par conséquent, je n’en discuterai pas plus avant.</p>
+</section>
+<section id="api-pyplot">
+<h2>API Pyplot<a class="headerlink" href="#api-pyplot" title="Lien permanent vers ce titre">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> est une collection de fonctions qui font fonctionner matplotlib comme MATLAB. Chaque fonction pyplot apporte des modifications à une figure : par exemple, crée une figure, crée une zone de traçage dans une figure, trace certaines lignes dans une zone de traçage, décore le tracé avec des étiquettes, etc.</p>
+<p>Dans <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>, divers états sont conservés à travers les appels de fonction, de sorte qu’il garde une trace de choses comme la figure actuelle et la zone de traçage, et les fonctions de traçage sont dirigées vers les axes actuels (veuillez noter que les « axes » ici et dans la plupart des endroits dans la documentation fait référence à la partie des axes d’une figure et non au terme mathématique strict pour plus d’un axe).</p>
+<p>Le code suivant produit des courbes sinus et cosinus à l’aide de l’API Pyplot:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
-<span class="n">x_point</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
-<span class="n">y_point</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">150</span><span class="p">])</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_point</span><span class="p">,</span> <span class="n">y_point</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="c1"># create a plot figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+
+<span class="c1"># create the first of two panels and set current axis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>   <span class="c1"># (rows, columns, panel number)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x1</span><span class="p">))</span>
+
+
+<span class="c1"># create the second of two panels and set current axis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>   <span class="c1"># (rows, columns, panel number)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x1</span><span class="p">));</span>
 </pre></div>
 </div>
 </div>
@@ -431,6 +611,165 @@ title="Print to PDF"
 <img alt="_images/before-beginning_1_0.png" src="_images/before-beginning_1_0.png" />
 </div>
 </div>
+<section id="visualisation-avec-pyplot">
+<h3>Visualisation avec Pyplot<a class="headerlink" href="#visualisation-avec-pyplot" title="Lien permanent vers ce titre">#</a></h3>
+<p>Générer une visualisation avec Pyplot est très simple. Les valeurs de l’axe des x vont de 0 à 3 et l’axe des y de 1 à 4. Si nous fournissons une seule liste ou un seul tableau à la commande plot(), matplotlib suppose qu’il s’agit d’une séquence de valeurs y et génère automatiquement les valeurs x. Étant donné que les plages python commencent par 0, le vecteur x par défaut a la même longueur que y mais commence par 0. Par conséquent, les données x sont [0,1,2,3] et les données y sont [1,2,3,4].</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Numbers&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/before-beginning_3_0.png" src="_images/before-beginning_3_0.png" />
+</div>
+</div>
+</section>
+<section id="plot-une-commande-polyvalente">
+<h3>plot() - Une commande polyvalente<a class="headerlink" href="#plot-une-commande-polyvalente" title="Lien permanent vers ce titre">#</a></h3>
+<p>plot() est une commande polyvalente. Il faudra un nombre arbitraire d’arguments. Par exemple, pour tracer x par rapport à y, nous pouvons émettre la commande suivante:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/before-beginning_5_0.png" src="_images/before-beginning_5_0.png" />
+</div>
+</div>
+</section>
+<section id="interface-de-machine-d-etat">
+<h3>Interface de machine d’état<a class="headerlink" href="#interface-de-machine-d-etat" title="Lien permanent vers ce titre">#</a></h3>
+<p>Pyplot fournit l’interface de machine d’état à la bibliothèque de traçage orientée objet sous-jacente. La machine à états crée implicitement et automatiquement des figures et des axes pour obtenir le tracé souhaité. Par example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;quadratic&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;cubic&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x label&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y label&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Simple Plot&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/before-beginning_7_0.png" src="_images/before-beginning_7_0.png" />
+</div>
+</div>
+</section>
+<section id="formatage-du-style-de-trace">
+<h3>Formatage du style de tracé<a class="headerlink" href="#formatage-du-style-de-trace" title="Lien permanent vers ce titre">#</a></h3>
+<p>Pour chaque paire d’arguments x, y, il existe un troisième argument facultatif qui est la chaîne de format qui indique la couleur et le type de ligne du tracé. Les lettres et symboles de la chaîne de format proviennent de MATLAB. Nous pouvons concaténer une chaîne de couleur avec une chaîne de style de ligne. La chaîne de format par défaut est “b-”, qui est une ligne bleue continue. Par exemple, pour tracer la ligne ci-dessus avec des cercles rouges, nous lancerions la commande suivante :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">16</span><span class="p">],</span> <span class="s1">&#39;ro&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/before-beginning_9_0.png" src="_images/before-beginning_9_0.png" />
+</div>
+</div>
+<p>La commande axis() dans l’exemple ci-dessus prend une liste de [xmin, xmax, ymin, ymax] et spécifie la fenêtre d’affichage des axes.</p>
+</section>
+</section>
+<section id="api-orientee-objet">
+<h2>API orientée objet<a class="headerlink" href="#api-orientee-objet" title="Lien permanent vers ce titre">#</a></h2>
+<p>L’API orientée objet est disponible pour les situations de traçage plus complexes. Cela nous permet d’exercer plus de contrôle sur la figure. Dans l’API Pyplot, nous dépendons d’une notion de figure ou d’axes « actifs ». Mais, dans l’API orientée objet, les fonctions de traçage sont des méthodes d’objets Figure et Axes explicites.</p>
+<p>La figure est le conteneur de niveau supérieur pour tous les éléments de tracé. Nous pouvons considérer l’objet Figure comme un conteneur en forme de boîte contenant un ou plusieurs Axes.</p>
+<p>Les Axes représentent une parcelle individuelle. L’objet Axes contient des objets plus petits tels que des axes, des graduations, des lignes, des légendes, des titres et des zones de texte.</p>
+<p>Le code suivant produit des courbes sinus et cosinus à l’aide de l’API orientée objet.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># First create a grid of plots</span>
+<span class="c1"># ax will be an array of two Axes objects</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+
+<span class="c1"># Call plot() method on the appropriate object</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x1</span><span class="p">),</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">x1</span><span class="p">),</span> <span class="s1">&#39;b-&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/before-beginning_11_0.png" src="_images/before-beginning_11_0.png" />
+</div>
+</div>
+<section id="objets-et-reference">
+<h3>Objets et référence<a class="headerlink" href="#objets-et-reference" title="Lien permanent vers ce titre">#</a></h3>
+<p>L’idée principale avec l’API orientée objet est d’avoir des objets sur lesquels on peut appliquer des fonctions et des actions. Le véritable avantage de cette approche devient apparent lorsque plus d’une figure est créée ou lorsqu’une figure contient plus d’une sous-parcelle.</p>
+<p>Nous créons une référence à l’instance figure dans la variable fig. Ensuite, nous créons une nouvelle instance d’axe axes en utilisant la méthode add_axes dans l’instance de classe Figure fig comme suit :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">y2</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">**</span> <span class="mi">2</span>
+
+<span class="n">axes</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_axes</span><span class="p">([</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">])</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;x2&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;y2&#39;</span><span class="p">)</span>
+<span class="n">axes</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/before-beginning_13_0.png" src="_images/before-beginning_13_0.png" />
+</div>
+</div>
+</section>
+<section id="figure-et-subplots">
+<h3>Figure et Subplots<a class="headerlink" href="#figure-et-subplots" title="Lien permanent vers ce titre">#</a></h3>
+<p>nous commençons par créer une figure et un axe. Une figure et des axes peuvent être créés comme suit :</p>
+<p><code class="docutils literal notranslate"><span class="pre">fig</span> <span class="pre">=</span> <span class="pre">plt.figure()</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">hache</span> <span class="pre">=</span> <span class="pre">plt.axes()</span></code></p>
+<p>Dans Matplotlib, la figure (une instance de la classe plt.Figure) est un conteneur unique qui contient tous les objets représentant les axes, les graphiques, le texte et les étiquettes. Les axes (une instance de la classe plt.Axes) est une boîte englobante avec des graduations et des étiquettes. Il contiendra les éléments de tracé qui composent la visualisation. J’ai utilisé le nom de variable fig pour faire référence à une instance de figure et ax pour faire référence à une instance d’axes ou à un groupe d’instances d’axes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/before-beginning_15_0.png" src="_images/before-beginning_15_0.png" />
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -471,7 +810,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="basic-elements.html" title="suivant page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Éléments basiques</p>
+        <p class="prev-next-title">Exemples basiques de tracé avec Matplotlib</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -482,7 +821,7 @@ title="Print to PDF"
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Soufiane, Imad, Wiam, Imane, Mohammed<br/>
+    By Saadouni Soufiane, Ikharaze Imad, Bissi Wiam, Bousaid Imane, Chahi Mohammed<br/>
   
 </p>
         </footer>
