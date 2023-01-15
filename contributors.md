@@ -2,8 +2,8 @@
 
 Cette recherche a été préparée par:
 
-- Soufiane
-- Imad
-- Wiam
-- Imane
-- Mohammed
+- Saadouni Soufiane
+- Ikharaze Imad
+- Bissi Wiam
+- Bousaid Imane
+- Chahi Mohammed

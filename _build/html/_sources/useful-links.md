@@ -9,3 +9,4 @@
 - [NumPy Github](https://github.com/numpy/numpy)
 - [Jupyter Lab](https://jupyter.org/try-jupyter/lab/)
 - [Google Colab](https://colab.research.google.com/)
+- [kaggle python](https://www.kaggle.com/code/prashant111/matplotlib-tutorial-for-beginners/notebook)

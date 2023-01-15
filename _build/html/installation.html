@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Avant de commencer" href="before-beginning.html" />
+    <link rel="next" title="Informations préliminaires" href="before-beginning.html" />
     <link rel="prev" title="Introduction a Matplotlib" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="fr">
@@ -122,17 +122,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="before-beginning.html">
-   Avant de commencer
+   Informations préliminaires
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="basic-elements.html">
-   Éléments basiques
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="advanced-elements.html">
-   Éléments avancées
+   Exemples basiques de tracé avec Matplotlib
   </a>
  </li>
  <li class="toctree-l1">
@@ -343,7 +338,7 @@ title="Print to PDF"
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip3 -v
 </pre></div>
 </div>
-<p>Pour installer Matplotlib</p>
+<p>Après on peut installer Matplotlib</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip install matplotlib
 </pre></div>
 </div>
@@ -351,8 +346,10 @@ title="Print to PDF"
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>pip3 install matplotlib
 </pre></div>
 </div>
-<p>Pour utiliser Matplotlib dans votre script python, ajouter la ligne suivant</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<p>La plupart du temps, nous devons travailler avec l’interface pyplot de Matplotlib. Nous devons donc importer l’interface pyplot de Matplotlib comme suit:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import Matplotlib</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 </section>
@@ -394,7 +391,7 @@ title="Print to PDF"
     <a class='right-next' id="next-link" href="before-beginning.html" title="suivant page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Avant de commencer</p>
+        <p class="prev-next-title">Informations préliminaires</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Éléments basiques &#8212; Matplotlib Recherche</title>
+    <title>Exemples basiques de tracé avec Matplotlib &#8212; Matplotlib Recherche</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Recherche" href="search.html" />
-    <link rel="next" title="Éléments avancées" href="advanced-elements.html" />
-    <link rel="prev" title="Avant de commencer" href="before-beginning.html" />
+    <link rel="next" title="Liens utiles" href="useful-links.html" />
+    <link rel="prev" title="Informations préliminaires" href="before-beginning.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="fr">
     
@@ -122,17 +122,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="before-beginning.html">
-   Avant de commencer
+   Informations préliminaires
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Éléments basiques
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="advanced-elements.html">
-   Éléments avancées
+   Exemples basiques de tracé avec Matplotlib
   </a>
  </li>
  <li class="toctree-l1">
@@ -370,13 +365,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pie-chart">
-   Pie chart
+  <a class="reference internal nav-link" href="#premier-trace-avec-matplotlib">
+   Premier tracé avec Matplotlib
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bar-chart">
-   Bar chart
+  <a class="reference internal nav-link" href="#traces-multilignes">
+   Tracés multilignes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#line-plot">
+   Line plot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scatter-plot">
+   Scatter Plot
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -385,8 +390,33 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#line-plot">
-   Line plot
+  <a class="reference internal nav-link" href="#bar-chart">
+   Bar chart
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#horizontal-bar-chart">
+   Horizontal Bar Chart
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pie-chart">
+   Pie chart
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajouter-des-etiquettes">
+   Ajouter des étiquettes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajouter-un-titre">
+   Ajouter un titre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajout-d-une-legende">
+   Ajout d’une légende
   </a>
  </li>
 </ul>
@@ -398,7 +428,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Éléments basiques</h1>
+                <h1>Exemples basiques de tracé avec Matplotlib</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -409,13 +439,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pie-chart">
-   Pie chart
+  <a class="reference internal nav-link" href="#premier-trace-avec-matplotlib">
+   Premier tracé avec Matplotlib
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#bar-chart">
-   Bar chart
+  <a class="reference internal nav-link" href="#traces-multilignes">
+   Tracés multilignes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#line-plot">
+   Line plot
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scatter-plot">
+   Scatter Plot
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -424,8 +464,33 @@ title="Print to PDF"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#line-plot">
-   Line plot
+  <a class="reference internal nav-link" href="#bar-chart">
+   Bar chart
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#horizontal-bar-chart">
+   Horizontal Bar Chart
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pie-chart">
+   Pie chart
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajouter-des-etiquettes">
+   Ajouter des étiquettes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajouter-un-titre">
+   Ajouter un titre
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ajout-d-une-legende">
+   Ajout d’une légende
   </a>
  </li>
 </ul>
@@ -438,76 +503,79 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="elements-basiques">
-<h1>Éléments basiques<a class="headerlink" href="#elements-basiques" title="Lien permanent vers ce titre">#</a></h1>
-<section id="pie-chart">
-<h2>Pie chart<a class="headerlink" href="#pie-chart" title="Lien permanent vers ce titre">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="exemples-basiques-de-trace-avec-matplotlib">
+<h1>Exemples basiques de tracé avec Matplotlib<a class="headerlink" href="#exemples-basiques-de-trace-avec-matplotlib" title="Lien permanent vers ce titre">#</a></h1>
+<p>Matplotlib fournit de nombreuses options de traçage pour visualiser les données. Vous pouvez également personnaliser vos graphiques en offrant une variété d’options de thème, de couleur et de palette que les utilisateurs peuvent utiliser pour interagir avec leurs graphiques.</p>
+<section id="premier-trace-avec-matplotlib">
+<h2>Premier tracé avec Matplotlib<a class="headerlink" href="#premier-trace-avec-matplotlib" title="Lien permanent vers ce titre">#</a></h2>
+<p>Maintenant, nous allons commencer à produire des tracés. Voici le premier exemple :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">x1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
-<span class="n">fruit_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span> <span class="s2">&quot;Apple&quot;</span><span class="p">,</span> <span class="s2">&quot;Strawberry&quot;</span><span class="p">,</span> <span class="s2">&quot;Blueberry&quot;</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">fruit_labels</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fruit_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">(</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/basic-elements_1_0.png" src="_images/basic-elements_1_0.png" />
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">plt.plot([1,</span> <span class="pre">3,</span> <span class="pre">2,</span> <span class="pre">4],</span> <span class="pre">'b-')</span></code></p>
+<p>Cette ligne de code est la commande de traçage proprement dite. Seule une liste de valeurs a été tracée qui représente les coordonnées verticales des points à tracer. Matplotlib utilisera une liste de valeurs horizontales implicites, de 0 (la première valeur) à N-1 (où N est le nombre d’éléments dans la liste).</p>
+<p><strong>Spécifier les deux listes</strong></p>
+<p>De plus, nous pouvons spécifier explicitement les deux listes comme suit :</p>
+<p><code class="docutils literal notranslate"><span class="pre">x3</span> <span class="pre">=</span> <span class="pre">range(6)</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">plt.plot(x3,</span> <span class="pre">[xi**2</span> <span class="pre">for</span> <span class="pre">xi</span> <span class="pre">in</span> <span class="pre">x3])</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">plt.show()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x3</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span> 
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x3</span><span class="p">,</span> <span class="p">[</span><span class="n">xi</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x3</span><span class="p">],</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span> 
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/basic-elements_2_0.png" src="_images/basic-elements_2_0.png" />
+<img alt="_images/basic-elements_3_0.png" src="_images/basic-elements_3_0.png" />
 </div>
 </div>
 </section>
-<section id="bar-chart">
-<h2>Bar chart<a class="headerlink" href="#bar-chart" title="Lien permanent vers ce titre">#</a></h2>
+<section id="traces-multilignes">
+<h2>Tracés multilignes<a class="headerlink" href="#traces-multilignes" title="Lien permanent vers ce titre">#</a></h2>
+<p>Les Tracés multilignes signifient tracer plus d’une parcelle sur la même figure. Nous pouvons tracer plus d’un graphique sur la même figure.
+Cela peut être réalisé en traçant toutes les lignes avant d’appeler show(). Cela peut être fait comme suit :</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="n">d1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.</span><span class="p">,</span><span class="mf">10.</span><span class="p">,</span><span class="mf">40.</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
+<span class="n">x4</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d1</span><span class="p">)),</span><span class="n">d1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x4</span><span class="p">,</span> <span class="p">[</span><span class="n">xi</span><span class="o">*</span><span class="mf">1.5</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x4</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x4</span><span class="p">,</span> <span class="p">[</span><span class="n">xi</span><span class="o">*</span><span class="mi">3</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x4</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x4</span><span class="p">,</span> <span class="p">[</span><span class="n">xi</span><span class="o">/</span><span class="mf">3.0</span> <span class="k">for</span> <span class="n">xi</span> <span class="ow">in</span> <span class="n">x4</span><span class="p">])</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/basic-elements_4_0.png" src="_images/basic-elements_4_0.png" />
-</div>
-</div>
-</section>
-<section id="histogram">
-<h2>Histogram<a class="headerlink" href="#histogram" title="Lien permanent vers ce titre">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
-
-<span class="n">d1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([  5.,  19.,  67., 147., 239., 227., 200.,  71.,  23.,   2.]),
- array([-3.26457505, -2.6213032 , -1.97803136, -1.33475952, -0.69148768,
-        -0.04821584,  0.59505601,  1.23832785,  1.88159969,  2.52487153,
-         3.16814337]),
- &lt;BarContainer object of 10 artists&gt;)
-</pre></div>
-</div>
-<img alt="_images/basic-elements_6_1.png" src="_images/basic-elements_6_1.png" />
+<img alt="_images/basic-elements_5_0.png" src="_images/basic-elements_5_0.png" />
 </div>
 </div>
 </section>
 <section id="line-plot">
 <h2>Line plot<a class="headerlink" href="#line-plot" title="Lien permanent vers ce titre">#</a></h2>
+<p>Un tracé linéaire visualise les informations sous la forme d’une série de points de données appelés marqueurs reliés par des segments de ligne droite.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -525,10 +593,193 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f3c0e3a70d0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f8352457700&gt;]
 </pre></div>
 </div>
-<img alt="_images/basic-elements_8_1.png" src="_images/basic-elements_8_1.png" />
+<img alt="_images/basic-elements_7_1.png" src="_images/basic-elements_7_1.png" />
+</div>
+</div>
+</section>
+<section id="scatter-plot">
+<h2>Scatter Plot<a class="headerlink" href="#scatter-plot" title="Lien permanent vers ce titre">#</a></h2>
+<p>Un autre type de graphique couramment utilisé est le nuage de points. Ici, les points sont représentés individuellement par un point ou un cercle.</p>
+<p><strong>Scatter Plot avec plt.plot()</strong></p>
+<p>Nous avons utilisé plt.plot/ax.plot pour produire des tracés linéaires. Nous pouvons utiliser les mêmes fonctions pour produire les nuages de points comme suit :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+
+<span class="n">x7</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
+
+<span class="n">y7</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x7</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x7</span><span class="p">,</span> <span class="n">y7</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/basic-elements_9_0.png" src="_images/basic-elements_9_0.png" />
+</div>
+</div>
+</section>
+<section id="histogram">
+<h2>Histogram<a class="headerlink" href="#histogram" title="Lien permanent vers ce titre">#</a></h2>
+<p>Les histogrammes sont un affichage graphique des fréquences. Ils sont représentés sous forme de barres. Ils montrent quelle partie de l’ensemble de données appartient à chaque catégorie, généralement spécifiée sous forme d’intervalles sans chevauchement. Ces catégories sont appelées bacs.</p>
+<p>La fonction plt.hist() peut être utilisée pour tracer un histogramme simple comme suit :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+
+<span class="n">d1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">d1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(array([  5.,  12.,  58., 119., 223., 268., 170.,  95.,  42.,   8.]),
+ array([-3.33412348, -2.70235727, -2.07059107, -1.43882486, -0.80705866,
+        -0.17529245,  0.45647375,  1.08823996,  1.72000616,  2.35177237,
+         2.98353857]),
+ &lt;BarContainer object of 10 artists&gt;)
+</pre></div>
+</div>
+<img alt="_images/basic-elements_11_1.png" src="_images/basic-elements_11_1.png" />
+</div>
+</div>
+</section>
+<section id="bar-chart">
+<h2>Bar chart<a class="headerlink" href="#bar-chart" title="Lien permanent vers ce titre">#</a></h2>
+<p>Les graphiques à barres affichent des barres rectangulaires sous forme verticale ou horizontale. Leur longueur est proportionnelle aux valeurs qu’ils représentent. Ils sont utilisés pour comparer deux ou plusieurs valeurs.</p>
+<p>Nous pouvons tracer un graphique à barres en utilisant la fonction plt.bar(). Nous pouvons tracer un graphique à barres comme suit :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">d1</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.</span><span class="p">,</span><span class="mf">10.</span><span class="p">,</span><span class="mf">40.</span><span class="p">,</span><span class="mi">30</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">d1</span><span class="p">)),</span><span class="n">d1</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/basic-elements_13_0.png" src="_images/basic-elements_13_0.png" />
+</div>
+</div>
+</section>
+<section id="horizontal-bar-chart">
+<h2>Horizontal Bar Chart<a class="headerlink" href="#horizontal-bar-chart" title="Lien permanent vers ce titre">#</a></h2>
+<p>Nous pouvons produire un graphique à barres horizontales en utilisant la fonction plt.barh(). C’est l’équivalent strict de la fonction plt.bar().</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">data2</span> <span class="o">=</span> <span class="p">[</span><span class="mf">5.</span> <span class="p">,</span> <span class="mf">25.</span> <span class="p">,</span> <span class="mf">50.</span> <span class="p">,</span> <span class="mf">20.</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data2</span><span class="p">)),</span> <span class="n">data2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/basic-elements_15_0.png" src="_images/basic-elements_15_0.png" />
+</div>
+</div>
+</section>
+<section id="pie-chart">
+<h2>Pie chart<a class="headerlink" href="#pie-chart" title="Lien permanent vers ce titre">#</a></h2>
+<p>Pie charts sont des représentations circulaires, divisées en secteurs. Les secteurs sont également appelés coins. La longueur d’arc de chaque secteur est proportionnelle à la quantité que nous décrivons. C’est un moyen efficace de représenter des informations lorsque nous nous intéressons principalement à comparer le coin à l’ensemble du gâteau, plutôt que les coins les uns contre les autres.</p>
+<p>Matplotlib fournit la fonction pie() pour tracer des camemberts à partir d’un tableau X. Les coins sont créés proportionnellement, de sorte que chaque valeur x du tableau X génère un coin proportionnel à x/sum(X).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">20</span><span class="p">,</span> <span class="mi">35</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">15</span><span class="p">]</span>
+<span class="n">fruit_labels</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span> <span class="s2">&quot;Apple&quot;</span><span class="p">,</span> <span class="s2">&quot;Strawberry&quot;</span><span class="p">,</span> <span class="s2">&quot;Blueberry&quot;</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">fruit_labels</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fruit_labels</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/basic-elements_17_0.png" src="_images/basic-elements_17_0.png" />
+</div>
+</div>
+</section>
+<section id="ajouter-des-etiquettes">
+<h2>Ajouter des étiquettes<a class="headerlink" href="#ajouter-des-etiquettes" title="Lien permanent vers ce titre">#</a></h2>
+<p>Une autre information importante à ajouter à un tracé est les étiquettes des axes, car elles spécifient le type de données que nous traçons.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;This is the X axis&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;This is the Y axis&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/basic-elements_19_0.png" src="_images/basic-elements_19_0.png" />
+</div>
+</div>
+</section>
+<section id="ajouter-un-titre">
+<h2>Ajouter un titre<a class="headerlink" href="#ajouter-un-titre" title="Lien permanent vers ce titre">#</a></h2>
+<p>Matplotlib fournit une simple fonction title() pour ajouter un titre à une image.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;First Plot&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/basic-elements_21_0.png" src="_images/basic-elements_21_0.png" />
+</div>
+</div>
+</section>
+<section id="ajout-d-une-legende">
+<h2>Ajout d’une légende<a class="headerlink" href="#ajout-d-une-legende" title="Lien permanent vers ce titre">#</a></h2>
+<p>Les légendes sont utilisées pour décrire la signification de chaque ligne ou courbe dans le tracé.</p>
+<p>Les légendes des courbes d’une figure peuvent être ajoutées de deux manières. Une méthode consiste à utiliser la méthode legend de l’objet axis et à passer une liste/tuple de textes de légende comme suit :</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x15</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x15</span><span class="p">,</span> <span class="n">x15</span><span class="o">*</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x15</span><span class="p">,</span> <span class="n">x15</span><span class="o">*</span><span class="mf">3.0</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x15</span><span class="p">,</span> <span class="n">x15</span><span class="o">/</span><span class="mf">3.0</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Normal&#39;</span><span class="p">,</span><span class="s1">&#39;Fast&#39;</span><span class="p">,</span><span class="s1">&#39;Slow&#39;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/basic-elements_23_0.png" src="_images/basic-elements_23_0.png" />
 </div>
 </div>
 </section>
@@ -565,13 +816,13 @@ title="Print to PDF"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">précédent</p>
-            <p class="prev-next-title">Avant de commencer</p>
+            <p class="prev-next-title">Informations préliminaires</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="advanced-elements.html" title="suivant page">
+    <a class='right-next' id="next-link" href="useful-links.html" title="suivant page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">suivant</p>
-        <p class="prev-next-title">Éléments avancées</p>
+        <p class="prev-next-title">Liens utiles</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

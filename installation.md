@@ -26,7 +26,7 @@ ou
 pip3 -v
 ```
 
-Pour installer Matplotlib
+Après on peut installer Matplotlib
 
 ```text
 pip install matplotlib
@@ -38,8 +38,10 @@ ou
 pip3 install matplotlib
 ```
 
-Pour utiliser Matplotlib dans votre script python, ajouter la ligne suivant
+La plupart du temps, nous devons travailler avec l'interface pyplot de Matplotlib. Nous devons donc importer l'interface pyplot de Matplotlib comme suit:
 
 ```python
+# Import Matplotlib
+
 import matplotlib.pyplot as plt
 ```
